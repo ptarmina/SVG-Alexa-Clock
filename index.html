@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Alexa Clock</title>
+
+  <style type="text/css">
+  	body {
+      background-color: #ccc;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+  }
+
+  </style>
+
+</head>
+<body>
+
+  <svg id="angularClock" width="220" height="220" viewBox="0 0 220 220"
+       xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+      <radialGradient id="rgrad" cx="30%" cy="30%" r="100%" >
+        <stop offset="0%" style="stop-color:rgb(104,214,189);stop-opacity:1" />
+        <stop offset="20%" style="stop-color:rgb(39,183,184);stop-opacity:1" />
+        <stop offset="100%" style="stop-color:rgb(15,80,182);stop-opacity:1" />
+      </radialGradient>
+    </defs>
+    <g>
+      <circle id="clockFace" cx="110" cy="110" r="100" fill="url(#rgrad)" stroke="black" stroke-width="10" ></circle>
+      <line id="analog_hour_hand" x1="110" y1="110" x2="110" y2="50" stroke="#000" stroke-width="20" stroke-linecap="round"></line>
+      <line id="analog_minute_hand" x1="110" y1="110" x2="110" y2="30" stroke="#fff" stroke-width="12" stroke-linecap="round"></line>
+      <line id="analog_second_hand" x1="110" y1="110" x2="110" y2="25" stroke="#fff" stroke-width="3"></line>
+      <circle cx="110" cy="110" r="3" fill="#0f5f9c"></circle>
+    </g>
+  </svg>
+
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+    <script  src="clock.js"></script>
+</body>
+
+</html>
